@@ -18,7 +18,7 @@ public class Letter : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, 
 	private void Awake() {
 
 		textChar = GetComponentInChildren<Text>();
-		image = GetComponent<Image>();
+		image = transform.GetChild(0).GetComponent<Image>();
 		handler = GetComponentInParent<InputHandler>();
 		game = GetComponentInParent<GameManager>();
 		defColor = image.color;
@@ -79,7 +79,7 @@ public class Letter : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, 
 			game.line.SetPosition(handler.numPressed - 1, new Vector3(anchor.x, anchor.y, -50));
 			handler.lastPressed = this;
 			highlighted = true;
-			image.color = new Color(0.6f, 0.8f, 1f);
+			image.color = new Color(0.2f, 0.68f, 0.98f);
 		}
 		else {
 			highlighted = false;

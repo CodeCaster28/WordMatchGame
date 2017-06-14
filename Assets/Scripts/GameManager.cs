@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+	[System.NonSerialized]
 	public List<Letter> letters;
 	public Letter[,] tiles = new Letter[4, 4];
+	[System.NonSerialized]
 	public LineRenderer line;
 
 	private void Awake() {
